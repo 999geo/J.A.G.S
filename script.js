@@ -26,7 +26,9 @@ recognition.onresult = function(event) {
 
 function startListening() {
   recognition.start();
-  alert('Listening...');
+  document.getElementById("voice-status").textContent = "🎙️ Listening...";
+}
+
 }
 console.log("Voice input detected:", command);
 
@@ -60,3 +62,6 @@ document.addEventListener('DOMContentLoaded', typeGreeting);
 function playBeep() {
   document.getElementById("sound-beep").play();
 }
+recognition.onend = function() {
+  document.getElementById("voice-status").textContent = "🎤 Voice Offline";
+};
