@@ -28,6 +28,7 @@ function startListening() {
   recognition.start();
   alert('Listening...');
 }
+console.log("Voice input detected:", command);
 
 function runVoiceCommand(command) {
   if (command.includes("status")) {
