@@ -14,7 +14,6 @@ function runCommand(command) {
   }
   alert(response);
 }
-// Add to your script.js
 const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
 recognition.lang = 'en-US';
 recognition.interimResults = false;
@@ -37,8 +36,26 @@ function runVoiceCommand(command) {
     document.body.style.filter = 'grayscale(100%)';
     alert("Stealth mode engaged.");
   } else if (command.includes("joke")) {
-    alert("Initiating sarcasm... please brace for impact.");
-  } else {
+    alert("Initiating sarcasm... I'm practically human now.");
+  }else {
     alert("Unknown command. Try again, Commander.");
   }
+}
+// Add this to script.js
+const greeting = "Welcome back, Commander Juice.";
+let i = 0;
+
+function typeGreeting() {
+  if (i < greeting.length) {
+    document.getElementById("jags-greeting").textContent += greeting.charAt(i);
+    i++;
+    setTimeout(typeGreeting, 60);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', typeGreeting);
+
+// Play sound on button click
+function playBeep() {
+  document.getElementById("sound-beep").play();
 }
