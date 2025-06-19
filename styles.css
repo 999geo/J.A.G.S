@@ -1,0 +1,48 @@
+/* styles.css */
+body {
+  background: radial-gradient(#0a0a0a, #020202);
+  color: #00f6ff;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
+}
+
+#jags-core {
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.arc-core {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  border: 6px solid #00f6ff;
+  animation: pulse 2s infinite;
+}
+
+.greeting-text {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid #00f6ff;
+  color: #00f6ff;
+  font-size: 1em;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #00f6ff;
+  color: #000;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #00f6ff; }
+  50% { box-shadow: 0 0 20px #00f6ff; }
+  100% { box-shadow: 0 0 10px #00f6ff; }
+}
