@@ -3,10 +3,12 @@
 </h1>
 <div id="jags-core">
   <div class="arc-core"></div>
-  <div class="greeting-text">Welcome back, Commander Juice.</div>
+<div class="greeting-text" id="jags-greeting"></div>
   <div class="command-panel">
     <button onclick="runCommand('status')">System Status</button>
     <button onclick="runCommand('stealth')">Activate Stealth Mode</button>
     <button onclick="runCommand('joke')">Engage Sarcasm</button>
   </div>
 </div>
+<button onclick="startListening()">🎤 Activate Voice</button>
+<audio id="sound-beep" src="beep.mp3" preload="auto"></audio>
