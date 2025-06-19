@@ -65,3 +65,17 @@ function playBeep() {
 recognition.onend = function() {
   document.getElementById("voice-status").textContent = "🎤 Voice Offline";
 };
+recognition.onresult = function(event) {
+  const command = event.results[0][0].transcript.toLowerCase();
+  console.log("🎙️ Heard:", command);  // Add this line
+  runVoiceCommand(command);
+};
+recognition.onspeechend = function() {
+  recognition.stop();
+  console.log("Speech ended");
+};
+
+recognition.onerror = function(event) {
+  console.error("Voice error:", event.error);
+  alert("Voice recognition error: " + event.error);
+};
